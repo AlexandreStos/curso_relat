@@ -1,0 +1,38 @@
+---
+title: "Primeiro relatório"
+author: "Alexandre Santos"
+date: "2023-01-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+![](https://static.corinthians.com.br/uploads/1674755261d0f3cac4d12fa2668b1ffbc4e3254253.jpg)
+
+![](images/image-95860254.png)
+
+
+
+A base de dados pinguins apresenta dados referente à \`r nrow(pinguins)\` pinguins, das seguintes espécies: \`r knitr::combine_words(names(pinguins\$especie), and = " e ", oxford_comma = FALSE)\`. Os dados foram coletados entre os anos \`r knitr::combine_words(unique(names(pinguins\$ano))\`, nas seguintes ilhas: \`r knitr::combine_words(unique(names(pinguins\$ilha), and = "e", oxford_comma = FALSE)\`. O peso médio dos pinguins amostrados foi de \`r mean(pinguins\$massa_corporal\`. Os dados foram obtidos através do pacote Palmer Penguins.
